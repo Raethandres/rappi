@@ -1,5 +1,4 @@
 import { Router } from 'express';
-const  fs =require('fs')
 
 const routes = Router();
 var Cub=Array()
@@ -13,22 +12,22 @@ var Cub=Array()
 
   let M=Array()
 
-  let s=Object.assign({},Ini)
-  let e=Object.assign({},End)
-  let sa=Object.assign({},s)
+  let st=Object.assign({},Ini)
+  let en=Object.assign({},End)
+  let sta=Object.assign({},st)
 
   while(true){
-    M.push({x:sa.x,y:sa.y,z:sa.z,v:sa.v})
-    if(sa.z<e.z){
-      sa.z+=1
+    M.push({x:sta.x,y:sta.y,z:sta.z,v:sta.v})
+    if(sta.z<en.z){
+      sta.z+=1
 
-    }else if(sa.y<e.y){
-      sa=Object.assign(sa,{z:s.z})
-      sa.y+=1
-    }else if(sa.x<e.x){
-      sa=Object.assign(sa,{z:s.z})
-      sa=Object.assign(sa,{y:s.y})
-      sa.x+=1
+    }else if(sta.y<en.y){
+      sta=Object.assign(sta,{z:st.z})
+      sta.y+=1
+    }else if(sta.x<en.x){
+      sta=Object.assign(sta,{z:st.z})
+      sta=Object.assign(sta,{y:st.y})
+      sta.x+=1
     }else{
 
       break
